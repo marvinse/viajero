@@ -1,0 +1,7 @@
+/* ----- Content component styles ----- */
+
+.content {
+    @include respond-to($medium) {
+
+    }
+}
