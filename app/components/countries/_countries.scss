@@ -1,0 +1,61 @@
+/* ----- Countries component styles ----- */
+
+.countries {
+	padding: 0 40px;
+	h2{
+		font-family: Roboto;
+		text-align: center;
+	}
+	&__container{
+		display: flex;
+		font-family: Poppins;
+		font-size: 14px;
+		font-weight: bold;
+		flex-wrap: wrap;
+		@include respond-to($medium) {
+			font-size: 20px;
+		}
+	}
+	&__country{
+		padding: 10px;
+		width: calc(100% / 2);
+		@include respond-to($medium) {
+			width: calc(100% / 4);
+    	}
+		a{
+			color: white;
+			text-decoration: none;
+		}
+		figure{
+			border-radius: 10px;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			img{
+				height: 100%;
+				width: 100%;
+			}
+			figcaption{
+				bottom: 10px;
+				left: 10px;
+				position: absolute;
+			}
+		}
+		&__shadow{
+			box-shadow: inset 0px -70px 62px 0px rgba(46,45,46,0.25);
+			-webkit-box-shadow: inset 0px -70px 62px 0px rgba(46,45,46,0.25);
+			-moz-box-shadow: inset 0px -70px 62px 0px rgba(46,45,46,0.25);
+			position: absolute;
+		    height: 100%;
+		    left: 0;
+		    top: 0;
+		    width: 100%;
+		}
+		&:hover &__shadow{
+			border: 3px solid black;
+			box-shadow: inset 0px -70px 300px 15px rgba(46,45,46,1);
+			-webkit-box-shadow: inset 0px -70px 300px 15px rgba(46,45,46,1);
+			-moz-box-shadow: inset 0px -70px 300px 15px rgba(46,45,46,1);
+		}
+	}
+}
