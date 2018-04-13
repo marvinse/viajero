@@ -27,9 +27,19 @@ html {
 }
 
 body {
+    font-family: Roboto, Arial;
     font-size: 16px;
 }
 
 h2{
     text-transform: uppercase;
+}
+
+h1, h2, h3, h4{
+    font-family: Poppins;
+}
+
+.wrapper__page{
+    margin: 0 auto;
+    max-width: 1000px;
 }

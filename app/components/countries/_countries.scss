@@ -1,9 +1,7 @@
 /* ----- Countries component styles ----- */
 
 .countries {
-	padding: 0 40px;
 	h2{
-		font-family: Roboto;
 		text-align: center;
 	}
 	&__container{
@@ -52,7 +50,6 @@
 		    width: 100%;
 		}
 		&:hover &__shadow{
-			border: 3px solid black;
 			box-shadow: inset 0px -70px 300px 15px rgba(46,45,46,1);
 			-webkit-box-shadow: inset 0px -70px 300px 15px rgba(46,45,46,1);
 			-moz-box-shadow: inset 0px -70px 300px 15px rgba(46,45,46,1);
