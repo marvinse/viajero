@@ -17,6 +17,9 @@
 	&__country{
 		padding: 10px;
 		width: calc(100% / 2);
+		@include respond-to($phone-landscape) {
+			width: calc(100% / 3);
+		}
 		@include respond-to($medium) {
 			width: calc(100% / 4);
     	}

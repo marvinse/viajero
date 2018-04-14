@@ -9,16 +9,19 @@
 @import "mixins";
 @import "global";
 @import "slick";
+@import "slick-theme";
 @import "fonts";
 
 
 /* ----- Component Styles ----- */
 
 // Page-specific overrides for a given component should still be placed in the *component* scss.
+@import "../../components/author/author";
 @import "../../components/content/content";
 @import "../../components/countries/countries";
 @import "../../components/footer/footer";
-@import "../../components/author/author";
+@import "../../components/mastheadslider/mastheadslider";
+
 
 /* ----- Page-Specific Styles ----- */
 
