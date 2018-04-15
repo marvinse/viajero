@@ -8,9 +8,9 @@ APP.mastheadslider = (function () {
         $('.mastheadslider .mastheadslider__slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true/*,
+            dots: true,
             autoplay: true,
-            autoplaySpeed: 5000*/
+            autoplaySpeed: 5000
         });
         $('.mastheadslider__controls--left').click(function(){
             $('.mastheadslider ul').slick('slickPrev');
