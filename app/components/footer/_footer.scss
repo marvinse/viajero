@@ -3,5 +3,77 @@
 .footer {
 	background: black;
 	color: white;
-	min-height: 300px;
+	&__wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		padding: 10px;
+		max-width: 1000px;
+		> *{
+			width: 100%;
+		}
+		@include respond-to($large) {
+			justify-content: space-between;
+			padding: 10px 0px;
+			> *{
+				width: calc(100% / 3);
+			}
+		}
+	}
+	#instafeed a{
+    	display: inline-block;
+    	width: calc(100% / 3);
+    	img{
+    		width: 100%;
+    	}
+	}
+	&__social{
+		display: flex;
+		justify-content: center;
+		a{
+			color: white;
+			margin-right: 25px;
+    		&:hover{
+    			color: #ff4747;
+    		}
+		}
+	}
+	&__column1{
+		color: #ff4747;
+		letter-spacing: 1px;
+		text-align: center;
+		text-transform: uppercase;
+		p{
+			font-size: 12px;
+		}
+		&__logo{
+			max-width: 150px;
+		}
+		@include respond-to($large) {
+			max-width: 220px;
+			text-align: left;
+		}
+	}
+	&__column2{
+		display: none;
+		a{
+			color: white;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+			&:after{
+				content: ',';
+			}
+		}
+		@include respond-to($large) {
+			display: block;
+		}
+	}
+	h3{
+		text-align: center;
+		@include respond-to($large) {
+			text-align: left;
+		}
+	}
 }

@@ -4,18 +4,6 @@ var APP = window.APP = window.APP || {};
 
 APP.menu = (function () {
 
-    var bindEventsToUI = function () {
-        $('.menu__hamburguer').click(function(){
-            $('.menu__items').slideToggle();
-        });
-        
-        activateSubitemsForMobile();
-
-        $( window ).resize(function() {
-            activateSubitemsForMobile();
-        });
-    };
-
     var activateSubitemsForMobile = function(){
         $('.menu__items > ul > li').each(function(){
             if( $(this).has('.menu__subitems').length > 0 ){
@@ -27,14 +15,25 @@ APP.menu = (function () {
                     });
                     $(this).click(function(){
                         $(this).find('.menu__subitems').slideToggle();
-                    })    
+                    });   
                 }else{
-                    $('.menu__items').attr('style','');
+                    $('.menu__items').attr('style', '');
                     $(this).find('a').off('click');
                     $(this).off('click');
-                    $(this).find('.menu__subitems').attr('style','');
+                    $(this).find('.menu__subitems').attr('style', '');
                 }
             }
+        });
+    };
+
+    var bindEventsToUI = function () {
+        $('.menu__hamburguer').click(function(){
+            $('.menu__items').slideToggle();
+        });
+        activateSubitemsForMobile();
+
+        $( window ).resize(function() {
+            activateSubitemsForMobile();
         });
     };
 

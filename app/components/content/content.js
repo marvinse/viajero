@@ -3,9 +3,6 @@
 var APP = window.APP = window.APP || {};
 
 APP.content = (function () {
-    var initSlickSlider = function(){
-        
-    };
 
     var bindEventsToUI = function () {
 
