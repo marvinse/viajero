@@ -2,7 +2,7 @@
 
 $menu-height: 57px;
 .menu {
-	background: black;
+	background: $main-color;
 	color: white;
 	min-height: $menu-height;
 	@include respond-to($large) {
@@ -47,7 +47,7 @@ $menu-height: 57px;
 				@include respond-to($large) {
 					display: inline-block;
 					&:hover{
-					color: #ff4747;
+					color: black;
 						text-decoration: underline;
 						.menu__subitems{
 							display: block;

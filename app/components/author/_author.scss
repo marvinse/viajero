@@ -1,7 +1,7 @@
 /* ----- Author component styles ----- */
 
 .author {
-	background: #FAF7F3;
+	background: darken($gray, 5%);
 	padding: 40px;
 	@include respond-to($medium) {
 		display: flex;

@@ -1,7 +1,7 @@
 /* ----- Footer component styles ----- */
 
 .footer {
-	background: black;
+	background: $main-color;
 	color: white;
 	&__wrapper{
 		display: flex;
@@ -34,12 +34,12 @@
 			color: white;
 			margin-right: 25px;
     		&:hover{
-    			color: #ff4747;
+    			color: black;
     		}
 		}
 	}
 	&__column1{
-		color: #ff4747;
+		color: black;
 		letter-spacing: 1px;
 		text-align: center;
 		text-transform: uppercase;
