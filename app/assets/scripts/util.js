@@ -33,7 +33,7 @@ APP.utils = (function () {
             var isMobile = false,
                 windowWidth = window.innerWidth,
                 //mobileBreakpoint = 1024;
-                mobileBreakpoint = 768;
+                mobileBreakpoint = 1024;
 
               if (windowWidth < mobileBreakpoint) {
                 isMobile = true;

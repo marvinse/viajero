@@ -1,7 +1,5 @@
 /* ----- Masonry component styles ----- */
 
-$margin: 10px;
-
 .masonry {
 	display: flex;
 	margin: 50px 0;
@@ -11,26 +9,26 @@ $margin: 10px;
 		background: white;
 		display: flex;
 		flex-wrap: wrap;
-		margin: $margin;
+		margin: $margin 0 35px;
 		min-height: 340px;
 		position: relative;
-		&--65{
-			width: calc(65% - (#{$margin} * 2) );
-		}
-		&--35{
-			width: calc(35% - (#{$margin} * 2) );
-		}
-		&--50{
-			width: calc(50% - (#{$margin} * 2) );
-		}
 		&__description{
 			padding: 10px;
+			height: 190px;
+			width: 100%;
+			h2{
+				margin: 0;
+			}
 		}
 		&__read{
 			background: $main-color;
+			bottom: 0;
 			height: 40px;
+			left: 0;
 			padding-right: 10px;
+			position: absolute;
 			text-align: right;
+			width: 100%;
 			a{
 				color: white;
 				font-size: 14px;
@@ -41,6 +39,12 @@ $margin: 10px;
 				}
 			}
 		}
+		&__image{
+			background-size: cover;
+    		background-position: 0 20%;
+    		height: 150px;
+			width: 100%;
+		}
 		h2{
 			font-size: 18px;
 			font-weight: normal;
@@ -49,62 +53,39 @@ $margin: 10px;
 		p{
 			font-size: 14px;
 		}
-	}
-	&__block{
-		&--65 &__description{
-			background: white;
-			width: 50%;
-		}
-		&--65 &__image{
-			background: url('/assets/images/masonry/cerro.jpg');
-			background-size: cover;
-    		background-position: 0 20%;
-    		height: 300px;
-			width: 50%;
-		}
-		&--65 &__read{
-			width: 100%;
-		}
-	}
-	&__block{
-		&--35 &__description{
-			height: 190px;
-			width: 100%;
-			h2{
-				margin: 0;
+		@include respond-to($large) {
+			margin: $margin 0;
+			&--65{
+				width: calc(65% - (#{$margin}) );
+				.masonry__block__description{
+					background: white;
+					height: auto;
+					width: 50%;
+				}
+				.masonry__block__image{
+					height: 300px;
+					width: 50%;
+				}
+				.masonry__block__read{
+					position: relative;
+					width: 100%;
+				}
+			}
+			&--35{
+				width: calc(35% - (#{$margin}) );
+			}
+			&--50{
+				width: calc(50% - (#{$margin}) );
 			}
 		}
-		&--35 &__image{
-			background: url('/assets/images/masonry/amsterdam.jpg');
-			background-size: cover;
-    		background-position: 0 20%;
-    		height: 150px;
-			width: 100%;
-		}
-		&--35 &__read{
-			bottom: 0;
-			left: 0;
-			position: absolute;
-			width: 100%;
-		}
 	}
-	&__block{
-		&--50 &__description{
-			height: 190px;
-			width: 100%;
-		}
-		&--50 &__image{
-			background: url('/assets/images/masonry/vegas.jpg');
-			background-size: cover;
-    		background-position: 0 20%;
-    		height: 150px;
-			width: 100%;
-		}
-		&--50 &__read{
-			bottom: 0;
-			left: 0;
-			position: absolute;
-			width: 100%;
-		}
+	&__block--65 .masonry__block__image{
+		background-image: url('/assets/images/masonry/cerro.jpg');
+	}
+	&__block--35 .masonry__block__image{
+		background-image: url('/assets/images/masonry/amsterdam.jpg');
+	}
+	&__block--50 .masonry__block__image{
+		background-image: url('/assets/images/masonry/vegas.jpg');
 	}
 }

@@ -2,7 +2,8 @@
 
 .author {
 	background: darken($gray, 5%);
-	padding: 40px;
+	padding: 40px $margin;
+	
 	@include respond-to($medium) {
 		display: flex;
 	}

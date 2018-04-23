@@ -22,10 +22,11 @@ $red: #C41230;
 
 $main-color: #00bdbb;
 $gray: #f8f8f8;
+$margin: 10px;
 /* ----- Responsive ----- */
 
 // Starting macro breakpoints - use more as needed in component and page files
-
+$wrapper: 1085px;
 $small : 375px;
 // $medium : 643px;
 $phone-landscape: 620px;
